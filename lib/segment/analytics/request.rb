@@ -6,12 +6,12 @@ require 'net/http'
 require 'net/https'
 require 'json'
 
-module Segment
+module SegmentIO
   class Analytics
     class Request
-      include Segment::Analytics::Defaults::Request
-      include Segment::Analytics::Utils
-      include Segment::Analytics::Logging
+      include SegmentIO::Analytics::Defaults::Request
+      include SegmentIO::Analytics::Utils
+      include SegmentIO::Analytics::Logging
 
       # public: Creates a new request object to send analytics batch
       #

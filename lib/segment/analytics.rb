@@ -7,11 +7,11 @@ require 'segment/analytics/request'
 require 'segment/analytics/response'
 require 'segment/analytics/logging'
 
-module Segment
+module SegmentIO
   class Analytics
     def initialize options = {}
       Request.stub = options[:stub] if options.has_key?(:stub)
-      @client = Segment::Analytics::Client.new options
+      @client = SegmentIO::Analytics::Client.new options
     end
 
     def method_missing message, *args, &block
